@@ -2,7 +2,7 @@
 import { RouterView } from 'vue-router';
 import '@fontsource/nunito';
 
-import Nav from './components/Nav.vue';
+import BaseLayout from './components/BaseLayout.vue';
 import ModeProvider from './context/ModeProvider.vue'
 
 </script>
@@ -10,11 +10,11 @@ import ModeProvider from './context/ModeProvider.vue'
 <template>
   <ModeProvider>
     <div class="font-nunito">
-      <Nav>
+      <BaseLayout>
         <div class="w-full ml-20 my-5">
           <RouterView/>
         </div>
-      </Nav>
+      </BaseLayout>
     </div>
   </ModeProvider>
 </template>

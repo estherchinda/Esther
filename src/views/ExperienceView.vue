@@ -5,7 +5,7 @@ import { useModeContext } from '../context/useModeContext.js';
 const { isLightMode } = useModeContext();
 
 
-const activeTab = ref('bernode');
+const activeTab = ref('olotu');
 
 const setActiveTab = tab => {
   activeTab.value = tab
@@ -17,6 +17,15 @@ const setActiveTab = tab => {
     <h1 class="text-6xl font-black">Experience</h1>
     <div class="flex mt-10">
         <div :class="`${isLightMode && 'border-color4'} border-r-4 w-2/5 h-[250px] space-y-7`">
+            <div class="text-2xl font-semibold flex items-center justify-between h-10">
+                <h3 @click="setActiveTab('olotu')" :class="`${activeTab === 'olotu' ? 'text-inherit' : 'text-gray-400'} hover:cursor-pointer`">Olotu Square</h3>
+                <v-icon 
+                v-show="activeTab === 'olotu'" 
+                name="md-playarrow-round" 
+                scale="2.5" 
+                :class="`${isLightMode ? 'text-color3' : 'text-color2'} mr-4`"
+                />
+            </div>
             <div class="text-2xl font-semibold flex items-center justify-between h-10">
                 <h3 @click="setActiveTab('bernode')" :class="`${activeTab === 'bernode' ? 'text-inherit' : 'text-gray-400'} hover:cursor-pointer`">Bernode Hub</h3>
                 <v-icon 
@@ -37,6 +46,20 @@ const setActiveTab = tab => {
             </div>
         </div>
         <div :class="`${isLightMode && 'border-color4'} border-l-4 w-3/5 h-[250px] px-3`">
+            <!-- olotu square -->
+            <div v-if="activeTab === 'olotu'" class="ml-5 slide-in-right">
+                <h3 class="text-lg font-semibold">Fullstack Web Development Intern</h3>
+                <div :class="`${isLightMode ? 'text-color3' : 'text-color2'} my-3 text-sm`">
+                    <v-icon name="fa-regular-building" scale="1"/>
+                    <span>Olotu Square</span>
+                </div>
+                <ul class="ml-8 text-[13px] list-disc">
+                    <li>Contributed as a team member for Frontend designs.</li>
+                    <li>Created and programmed fresh concepts and features for one of the company's projects.</li>
+                    <li>Contributed as a Frontend dev for new projects in the company.</li>
+                    <li>Create beautiful and interactive UI/UX for users on company website.</li>
+                </ul>
+            </div>
             <!-- bernode hub -->
             <div v-if="activeTab === 'bernode'" class="ml-5 slide-in-right">
                 <h3 class="text-lg font-semibold">Frontend Web Development Intern</h3>
