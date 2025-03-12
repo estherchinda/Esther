@@ -90,4 +90,35 @@
   .bar {
     animation: bars 0.5s linear;
   }
+
   
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .animate-spin-slow {
+    animation: spin-slow 15s linear infinite;
+  }
+  
+  .group:hover {
+    animation-play-state: paused;
+  }
+
+  .rotate-counter {
+    transform: rotate(-360deg);
+    animation: spin-counter 10s linear infinite;
+  }
+  
+  @keyframes spin-counter {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(-360deg);
+    }
+  }

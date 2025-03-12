@@ -10,7 +10,7 @@ const items = ref([
         title: 'Fashion Essentials',
         content: 'A frontend ecommerce store that performs the basic CRUD functionality with API from fakestoreapi.',
         href: 'https://github.com/estherchinda/Fashion_Essentials',
-        src: 'https://res.cloudinary.com/dygn4o3nv/image/upload/c_crop,w_1500,h_550/v1735307659/Screenshot_94_xrxcuh.png',
+        src: 'https://res.cloudinary.com/dygn4o3nv/image/upload/c_fill,w_1500,h_550/v1740240616/Screenshot_32_eutlgt.png',
     },
     {
         id: 2, 
